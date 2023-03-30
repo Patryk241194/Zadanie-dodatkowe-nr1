@@ -2,51 +2,55 @@ package com.vehicles;
 
 abstract class WaterVehicle extends Vehicle {
 
-    public WaterVehicle(String vehicleName, boolean doesVehicleHaveEngine) {
-        super(vehicleName, doesVehicleHaveEngine);
+    private Engine engine;
 
+    public WaterVehicle(String vehicleName, boolean doesVehicleHaveEngine) {
+        super(vehicleName);
+        this.engine = new Engine(doesVehicleHaveEngine);
     }
+
     void swim() {
         System.out.println(this.getVehicleName() + " swims");
     }
+
     @Override
     public void vehicleType() {
-        if (this.getDoesVehicleHaveEngine()) {
+        if (engine.getDoesVehicleHaveEngine()) {
             System.out.println(this.getVehicleName() + " is a water-type vehicle with engine");
-        } else {
+        } else if (!engine.getDoesVehicleHaveEngine()){
             System.out.println(this.getVehicleName() + " is a water-type vehicle without engine");
         }
+        System.out.println(this.getVehicleName()+ " is a " + this.getClass().getSimpleName());
         this.swim();
+        System.out.println(this.getClass().getSimpleName() + "'s specification: ...\n");
+    }
+
+    @Override
+    void startEngine() {
+        this.engine.start();
+    }
+
+    @Override
+    void stopEngine() {
+        this.engine.stop();
     }
 }
 
 
 class Kayak extends WaterVehicle {
 
-    public Kayak(String vehicleName, boolean doesVehicleHaveEngine) {
-        super(vehicleName, doesVehicleHaveEngine);
-    }
 
-    @Override
-    public void vehicleType() {
-        super.vehicleType();
-        System.out.println(this.getVehicleName()+ " is a " + Kayak.class.getName());
-        System.out.println("Kayak's specification: ...\n");
+    public Kayak(String vehicleName) {
+        super(vehicleName, false);
     }
 }
 
 
 class Motorboat extends WaterVehicle {
 
-    public Motorboat(String vehicleName, boolean doesVehicleHaveEngine) {
-        super(vehicleName, doesVehicleHaveEngine);
-    }
-
-    @Override
-    public void vehicleType() {
-        super.vehicleType();
-        System.out.println(this.getVehicleName()+ " is a " + Motorboat.class.getName());
-        System.out.println("Motorboat's specification: ...\n");
+    Engine engine;
+    public Motorboat(String vehicleName) {
+        super(vehicleName,true);
     }
 }
 

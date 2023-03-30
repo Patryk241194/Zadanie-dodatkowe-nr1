@@ -4,6 +4,7 @@ class VehicleRecognizer {
 
     private Vehicle vehicle;
 
+
     public VehicleRecognizer(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
@@ -12,12 +13,13 @@ class VehicleRecognizer {
         this.vehicle.vehicleType();
     }
 
+
     public void startEngine() {
-        this.vehicle.start();
+        this.vehicle.startEngine();
     }
 
     public void stopEngine() {
-        this.vehicle.stop();
+        this.vehicle.stopEngine();
     }
 
     public String toString() {
