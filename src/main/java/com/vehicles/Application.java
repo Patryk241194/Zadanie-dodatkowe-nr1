@@ -4,7 +4,7 @@ public class Application {
     public static void main (String[] args) {
 
         VehicleRecognizer[] vehicle = new VehicleRecognizer[200];
-        vehicle[0] = new VehicleRecognizer(new Kayak("Seabird ÅŃŃŃŃfjord 368"));
+        vehicle[0] = new VehicleRecognizer(new Kayak("Seabird Åfjord 368"));
         vehicle[1] = new VehicleRecognizer(new Bicycle("Giant STORMGUARD E+ 2"));
         vehicle[2] = new VehicleRecognizer(new Glider("Joysway Freeman V3"));
         vehicle[3] = new VehicleRecognizer(new Motorboat("Yamarin 60 DC"));

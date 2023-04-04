@@ -17,7 +17,7 @@ abstract class AirVehicle extends Vehicle {
     public void vehicleType() {
         if (engine.getDoesVehicleHaveEngine()) {
             System.out.println(this.getVehicleName() + " is a air-type vehicle with engine");
-        } else if (!engine.getDoesVehicleHaveEngine()){
+        } else {
             System.out.println(this.getVehicleName() + " is a air-type vehicle without engine");
         }
         System.out.println(this.getVehicleName()+ " is a " + this.getClass().getSimpleName());
