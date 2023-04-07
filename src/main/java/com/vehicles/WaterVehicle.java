@@ -17,10 +17,10 @@ abstract class WaterVehicle extends Vehicle {
     public void vehicleType() {
         if (engine.getDoesVehicleHaveEngine()) {
             System.out.println(this.getVehicleName() + " is a water-type vehicle with engine");
-        } else if (!engine.getDoesVehicleHaveEngine()){
+        } else {
             System.out.println(this.getVehicleName() + " is a water-type vehicle without engine");
         }
-        System.out.println(this.getVehicleName()+ " is a " + this.getClass().getSimpleName());
+        System.out.println(this.getVehicleName() + " is a " + this.getClass().getSimpleName());
         this.swim();
         System.out.println(this.getClass().getSimpleName() + "'s specification: ...\n");
     }
@@ -39,7 +39,6 @@ abstract class WaterVehicle extends Vehicle {
 
 class Kayak extends WaterVehicle {
 
-
     public Kayak(String vehicleName) {
         super(vehicleName, false);
     }
@@ -48,9 +47,8 @@ class Kayak extends WaterVehicle {
 
 class Motorboat extends WaterVehicle {
 
-    Engine engine;
     public Motorboat(String vehicleName) {
-        super(vehicleName,true);
+        super(vehicleName, true);
     }
 }
 
