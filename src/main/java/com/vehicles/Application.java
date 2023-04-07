@@ -1,7 +1,7 @@
 package com.vehicles;
 
 public class Application {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         VehicleRecognizer[] vehicle = new VehicleRecognizer[200];
         vehicle[0] = new VehicleRecognizer(new Kayak("Seabird Åfjord 368"));
@@ -12,10 +12,11 @@ public class Application {
         vehicle[5] = new VehicleRecognizer(new Airplane("TECNAM P2002JF SP-WIX"));
 
 
-        for (int i = 0; i<vehicle.length; i++) {
+        for (int i = 0; i < vehicle.length; i++) {
             if (vehicle[i] instanceof VehicleRecognizer) {
-                System.out.println("Vehicle no. " + (i+1) + ": " + vehicle[i].toString());
-                vehicle[i].process(); }
+                System.out.println("Vehicle no. " + (i + 1) + ": " + vehicle[i].toString());
+                vehicle[i].process();
+            }
         }
 
         System.out.println("Attempting to stop & start the engine on a vehicle without an engine:");

@@ -17,11 +17,12 @@ class Engine {
         if (this.doesVehicleHaveEngine) {
             if (!this.engineOn) {
                 this.engineOn = true;
-                System.out.println("The "+ this.getClass().getSimpleName() + "'s engine has been turned on");
+                System.out.println("The " + this.getClass().getSimpleName() + "'s engine has been turned on");
             } else if (this.engineOn) {
-                System.out.println("The "+ this.getClass().getSimpleName() + "'s engine is already running");
-            }} else {
-            System.out.println("This "+ this.getClass().getSimpleName() + " has no engine");
+                System.out.println("The " + this.getClass().getSimpleName() + "'s engine is already running");
+            }
+        } else {
+            System.out.println("This " + this.getClass().getSimpleName() + " has no engine");
         }
     }
 
@@ -29,12 +30,13 @@ class Engine {
         if (this.doesVehicleHaveEngine) {
             if (this.engineOn) {
                 this.engineOn = false;
-                System.out.println("The "+ this.getClass().getSimpleName() + "'s engine has been turned off");
+                System.out.println("The " + this.getClass().getSimpleName() + "'s engine has been turned off");
             } else if (!this.engineOn) {
-                System.out.println("The "+ this.getClass().getSimpleName() + "'s engine is not running, cannot be turned off");
-            }} else {
-            System.out.println("This "+ this.getClass().getSimpleName() + " has no engine");
+                System.out.println("The " + this.getClass().getSimpleName() + "'s engine is not running, cannot be turned off");
+            }
+        } else {
+            System.out.println("This " + this.getClass().getSimpleName() + " has no engine");
+        }
     }
-}
 }
 

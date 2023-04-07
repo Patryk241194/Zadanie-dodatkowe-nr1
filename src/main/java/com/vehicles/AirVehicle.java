@@ -9,6 +9,7 @@ abstract class AirVehicle extends Vehicle {
         this.engine = new Engine(doesVehicleHaveEngine);
 
     }
+
     void fly() {
         System.out.println(this.getVehicleName() + " flies");
     }
@@ -20,7 +21,7 @@ abstract class AirVehicle extends Vehicle {
         } else {
             System.out.println(this.getVehicleName() + " is a air-type vehicle without engine");
         }
-        System.out.println(this.getVehicleName()+ " is a " + this.getClass().getSimpleName());
+        System.out.println(this.getVehicleName() + " is a " + this.getClass().getSimpleName());
         this.fly();
         System.out.println(this.getClass().getSimpleName() + "'s specification: ...\n");
     }
